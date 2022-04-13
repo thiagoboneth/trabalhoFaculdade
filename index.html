@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    
+}
+body{
+    background-color: #000000;
+}
+
+/* largura da cor do nav */
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    background-color: #0f0;
+    /* talvez tirar */
+    font-family: 'B612  ', sans-serif;
+}
+
+/* Letras da logo*/
+.logo {
+    color: #606163;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 20px;
+    width: 30%;
+}
+.logo img{
+    width: 150px;
+    margin-left: 10%;
+}
+
+/*Alinhamento do menu*/
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+   
+}
+
+
+/* Oculta as bolinhas de itens da menuEmLista */
+.nav-links li {
+    list-style: none;
+    margin-top: 20px;
+}
+
+/* Cor das letras do menu */
+.nav-links a {
+    color: #606163;
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.menuEmLista div {
+    width: 25px;
+    height: 3px;
+    background-color: #606163;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+.menuEmLista {
+    display: none;
+    cursor: pointer;
+}
+
+
+
+@media screen and (max-width:768px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .nav-links {
+        position: absolute;
+        right: 0px;
+        height: 92vh;
+        top: 8vh;
+        background-color: #c9471b;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 80%;
+        transform: translateX(100%);
+        transition: transform 0.5 ease-in;
+    }
+
+    .nav-links li {
+        opacity: 0;
+    }
+
+    .menuEmLista {
+        display: block;
+    }
+}
+
+.caixa-tens {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.itens {
+
+    padding: 5px;
+    margin: 10px;
+    width: 290px;
+}
+.img-cover{
+    background: url(img_jogos/carrinho\ \(2\).png);
+   
+    background-size: cover;
+}
+.imagem {
+    width: 100%;
+
+}
+.imagem:hover{
+    opacity: 0.5;
+    background-color: rgba(255,255,255,0.5);
+    transition: opacity 0.3s;
+}
+.imagem:active{
+    opacity: 0.1;
+}
+.imagem:active img{
+    opacity: 0.2;
+}
+.carrinho{
+    width: 70px;
+    margin-top: -20px;
+    
+}
+img:hover{
+    opacity: 0.5;
+
+}
+
+.valor {
+    font-weight: bold;
+    font-size: 15pt;
+}
+
+/*footer*/
+
+.footer {
+    background-color:rgba(0,255,0,0.5);
+}
+
+.footer-container {
+    max-width: 1200px;
+    padding: 120px 20px 60px 20px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
+    align-items: center;
+}
+
+.footer-texto {
+    font-size: 1.5rem;
+    line-height: 1.33;
+    color: #000000;
+}
+
+.footer-contato li {
+    font-weight: bold;
+    font-size: 2.25rem;
+    line-height: 1.1;
+    color: #000000;
+    margin-bottom: 30px;
+    list-style-type: none;
+
+}
+
+.footer-contato li a{
+    color: #000000;
+}
+
+.footer-copy{
+    grid-column: 1 / -1;
+    font-size: 1.125rem;
+    color: #000000;
+}
+
+@media (max-width: 800px){
+    .footer-container{
+        text-align: center;
+        list-style: none;
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    .footer-contato li {
+        font-size: 1.5rem;
+    }
+}
+    </style>
+    <title>White Habbit Geek Center</title>
+</head>
+
+<body>
+    <nav>
+        <a class="logo">
+           
+            <img id="meulogo" src="img_jogos/logo_logo.jpg" alt="Logo Nintendo">
+            
+        </a>
+        <ul class="nav-links">
+            <li>
+                <a href="#">HOME</a>
+            </li>
+            <li>
+                <a href="#">SOBRE NÓS</a>
+            </li>
+            <li>
+                <a href="#">CONTATO</a>
+            </li>
+            <li>
+                <a href="#"><img src="img_jogos/carrinho (2).png" alt="" class="carrinho"></a>
+            </li>
+            
+           
+        </ul>
+        <div class="menuEmLista">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+
+    <section class="section">
+        <div class="caixa-tens">
+            <div class="itens">
+                <div class="img-cover">
+                    
+                    <img src="img_jogos/super_mario.jpg" class="imagem" />
+                </div>
+                <p></p>
+                <div class="valor"></div>
+            </div>
+            <div class="itens">
+                <div class="img-cover">
+                    <img src="img_jogos/Donkey_Kong.jpg" class="imagem" />
+                </div>
+                <p></p>
+                <div class="valor"></div>
+            </div>
+            <div class="itens">
+                <div class="img-cover">
+                    <img src="img_jogos/Mario_Kart.png" class="imagem" />
+                </div>
+                <p></p>
+                <div class="valor"></div>
+            </div>
+            <div class="itens">
+                <div class="img-cover">
+                    <img src="img_jogos/street_fighter_alpha_2.jpg" class="imagem" />
+                </div>
+                <p></p>
+                <div class="valor"></div>
+            </div>
+            <div class="itens">
+                <div class="img-cover">
+                    <img src="img_jogos/super_metroid.jpg" class="imagem" />
+                </div>
+                <p></p>
+                <div class="valor"></div>
+            </div>
+            <div class="itens">
+                <div class="img-cover">
+                    <img src="img_jogos/super_star_soccer.jpg" class="imagem" />
+                </div>
+                <p></p>
+                <div class="valor"></div>
+            </div>
+            <div class="itens">
+                <div class="img-cover">
+                    <img src="img_jogos/The_Legend_of_Zelda.jpg" class="imagem" />
+                </div>
+                <p></p>
+                <div class="valor"></div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer" id="contato">
+        <div class="footer-container">
+            <p class="footer-texto">
+                White Habbit Geek Center
+            </p>
+            <ul class="footer-contato">
+                <li><a href="mailto:loja@ecommerce.com">whitehabbit@loja.com</a></li>
+                <li><a href="tel:+5592911224455">+55 92 91122-4455</a></li>
+                <li><a href="#">Tabalhe com a gente</a></li>
+            </ul>
+            <p id="copy">&copy; White Habbit Geek Center
+
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>
